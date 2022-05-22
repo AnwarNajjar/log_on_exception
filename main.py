@@ -11,7 +11,7 @@ def create_logger():
     return logger
   
 logger = create_logger() 
-def log_on_exception(logger):
+def log_on_exception(*args, logger):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):     
